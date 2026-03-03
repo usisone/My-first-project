@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mark Stephens</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+      border-bottom: 2px solid #b22222;
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #ffffff;
+      text-shadow: 0 0 30px rgba(178, 34, 34, 0.6);
+    }
+
+    header p.tagline {
+      margin-top: 12px;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    /* decorative divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 32px 20px;
+    }
+    .divider span { display: block; height: 1px; width: 120px; background: #b22222; }
+    .divider svg { color: #b22222; }
+
+    /* ── Section title ── */
+    .section-title {
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #b22222;
+      margin-bottom: 40px;
+    }
+
+    /* ── Cards grid ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 36px 28px;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #b22222;
+      box-shadow: 0 12px 40px rgba(178, 34, 34, 0.2);
+    }
+
+    .card-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #1e1e1e;
+      border: 1px solid #333;
+    }
+    .card-icon svg { width: 36px; height: 36px; }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #999;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+    .card .tags span {
+      background: #222;
+      border: 1px solid #333;
+      color: #ccc;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid #1e1e1e;
+      color: #444;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <h1>MARK STEPHENS</h1>
+    <p class="tagline">Golfer &nbsp;·&nbsp; Snowboarder &nbsp;·&nbsp; Metal Head</p>
+  </header>
+
+  <!-- divider -->
+  <div class="divider">
+    <span></span>
+    <!-- skull icon -->
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2a8 8 0 0 1 8 8c0 3-1.5 5.5-4 7v2H8v-2C5.5 15.5 4 13 4 10a8 8 0 0 1 8-8z"/>
+      <line x1="9" y1="17" x2="9" y2="19"/><line x1="15" y1="17" x2="15" y2="19"/>
+      <circle cx="9" cy="11" r="1.5"/><circle cx="15" cy="11" r="1.5"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <p class="section-title">Interests &amp; Passions</p>
+
+  <!-- ── CARDS ── -->
+  <div class="cards">
+
+    <!-- GOLF -->
+    <div class="card">
+      <div class="card-icon">
+        <!-- golf ball + flag SVG -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- flagstick -->
+          <line x1="38" y1="8" x2="38" y2="48" stroke="#b22222" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- flag -->
+          <polygon points="38,8 54,16 38,24" fill="#b22222"/>
+          <!-- golf ball -->
+          <circle cx="22" cy="48" r="10" fill="#e0e0e0"/>
+          <!-- dimples -->
+          <circle cx="19" cy="46" r="1.2" fill="#aaa"/>
+          <circle cx="23" cy="43" r="1.2" fill="#aaa"/>
+          <circle cx="27" cy="46" r="1.2" fill="#aaa"/>
+          <circle cx="21" cy="50" r="1.2" fill="#aaa"/>
+          <circle cx="25" cy="50" r="1.2" fill="#aaa"/>
+          <!-- ground line -->
+          <line x1="6" y1="58" x2="58" y2="58" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Golf</h2>
+      <p>A dedicated club member with a passion for the fairways and greens.</p>
+      <div class="tags">
+        <span>Wentworth Golf Club</span>
+        <span>Hampstead Golf Club</span>
+      </div>
+    </div>
+
+    <!-- SNOWBOARDING -->
+    <div class="card">
+      <div class="card-icon">
+        <!-- snowboarder SVG -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- board -->
+          <rect x="4" y="50" width="56" height="6" rx="3" fill="#b22222"/>
+          <!-- body -->
+          <line x1="28" y1="24" x2="36" y2="44" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <!-- arms -->
+          <line x1="22" y1="33" x2="40" y2="30" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <!-- head -->
+          <circle cx="31" cy="18" r="7" fill="#e0e0e0"/>
+          <!-- helmet line -->
+          <path d="M24 17 Q31 11 38 17" stroke="#b22222" stroke-width="2" fill="none"/>
+          <!-- legs -->
+          <line x1="36" y1="44" x2="30" y2="50" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <line x1="36" y1="44" x2="38" y2="50" stroke="#e0e0e0" stroke-width="3" stroke-linecap="round"/>
+          <!-- snowflakes -->
+          <text x="6" y="20" font-size="8" fill="#888">❄</text>
+          <text x="48" y="28" font-size="7" fill="#666">❄</text>
+          <text x="14" y="35" font-size="6" fill="#555">❄</text>
+        </svg>
+      </div>
+      <h2>Snowboarding</h2>
+      <p>Carving down world-class mountain runs with three unforgettable seasons under the belt.</p>
+      <div class="tags">
+        <span>Whistler ×2</span>
+        <span>Innsbruck ×1</span>
+      </div>
+    </div>
+
+    <!-- MELODIC DEATH METAL -->
+    <div class="card">
+      <div class="card-icon">
+        <!-- electric guitar SVG -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- guitar body -->
+          <ellipse cx="22" cy="46" rx="15" ry="12" fill="#1e1e1e" stroke="#b22222" stroke-width="2"/>
+          <!-- sound hole -->
+          <circle cx="22" cy="46" r="5" fill="#0d0d0d" stroke="#b22222" stroke-width="1"/>
+          <!-- neck -->
+          <rect x="30" y="16" width="6" height="32" rx="3" fill="#333" stroke="#b22222" stroke-width="1.5"/>
+          <!-- headstock -->
+          <rect x="28" y="8" width="10" height="12" rx="2" fill="#444" stroke="#b22222" stroke-width="1.5"/>
+          <!-- strings -->
+          <line x1="31" y1="10" x2="25" y2="52" stroke="#888" stroke-width="0.8"/>
+          <line x1="33" y1="10" x2="22" y2="53" stroke="#888" stroke-width="0.8"/>
+          <line x1="35" y1="10" x2="19" y2="52" stroke="#888" stroke-width="0.8"/>
+          <!-- tuning pegs -->
+          <circle cx="28" cy="11" r="2" fill="#b22222"/>
+          <circle cx="36" cy="11" r="2" fill="#b22222"/>
+          <circle cx="28" cy="17" r="2" fill="#b22222"/>
+          <circle cx="36" cy="17" r="2" fill="#b22222"/>
+        </svg>
+      </div>
+      <h2>Melodic Death Metal</h2>
+      <p>A connoisseur of the genre's signature blend of aggression, melody, and atmosphere.</p>
+      <div class="tags">
+        <span>Soilwork</span>
+        <span>Insomnium</span>
+        <span>Be'lakor</span>
+        <span>Dark Tranquillity</span>
+        <span>In Flames</span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 &nbsp;·&nbsp; MARK STEPHENS
+  </footer>
+
+</body>
+</html>
