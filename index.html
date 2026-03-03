@@ -126,6 +126,37 @@
       border-radius: 20px;
     }
 
+    /* ── Band logos grid ── */
+    .band-logos {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 20px;
+      align-items: center;
+    }
+    .band-logos img {
+      max-width: 160px;
+      max-height: 40px;
+      width: auto;
+      height: auto;
+      /* invert so black logos show white on dark background */
+      filter: invert(1) brightness(0.85);
+      opacity: 0.85;
+      transition: opacity 0.2s, filter 0.2s;
+    }
+    .band-logos img:hover {
+      opacity: 1;
+      filter: invert(1) brightness(1);
+    }
+    .band-logos .tag-text {
+      background: #222;
+      border: 1px solid #333;
+      color: #ccc;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
     /* ── Footer ── */
     footer {
       text-align: center;
@@ -249,12 +280,12 @@
       </div>
       <h2>Melodic Death Metal</h2>
       <p>A connoisseur of the genre's signature blend of aggression, melody, and atmosphere.</p>
-      <div class="tags">
-        <span>Soilwork</span>
-        <span>Insomnium</span>
-        <span>Be'lakor</span>
-        <span>Dark Tranquillity</span>
-        <span>In Flames</span>
+      <div class="band-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Soilwork_logo.svg" alt="Soilwork" title="Soilwork" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Insomnium_logo.svg" alt="Insomnium" title="Insomnium" />
+        <span class="tag-text">Be'lakor</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Dark_Tranquillity_logo.svg" alt="Dark Tranquillity" title="Dark Tranquillity" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/In_flames_logo_01.png" alt="In Flames" title="In Flames" />
       </div>
     </div>
 
